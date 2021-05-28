@@ -8,8 +8,8 @@ class User(db.Model):
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
 
-    def __repr___(self):
-        return '<User {}>'.format(self.username)
+# def __repr___(self):
+#        return '<User {}>'.format(self.username)
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
